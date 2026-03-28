@@ -12,21 +12,20 @@ The complete dataset (105 files, ~136 MB uncompressed) is available as a GitHub 
 1. Go to: https://github.com/LiranOG/cosmic-ib-dashboard/releases
 2. Download the latest `files.7z` archive
 3. Extract to the project root:
-   ```bash
-   7z x files.7z -oextracted/
+   ```
+   bash 7z x files.7z -oextracted/
 
 Option 2: Using the download script (Linux/Mac/WSL)
 bash
 # From the project root
-```bash
- scripts/download_data.sh
+```
+bash scripts/download_data.sh
 ```
 
 Option 3: Manual extraction
 Place files.7z in the project root and run:
-
-```bash
-7z x files.7z -oextracted/
+```
+bash 7z x files.7z -oextracted/
 ```
 
 Note: The app expects the extracted files in a folder named extracted/ alongside app.py.
