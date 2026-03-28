@@ -223,6 +223,76 @@ DATA_DIR = "/path/to/your/data"
 
 ---
 
+##  Data Requirements
+
+The dashboard requires pre‑computed data files that are **not included in this repository** due to size constraints.
+
+### Quick Download
+
+The easiest way to get the data:
+
+```bash
+bash scripts/download_data.sh
+```
+
+his script will:
+
+Download files.7z from the GitHub Release
+
+Extract it to the extracted/ folder
+
+Remove the compressed archive
+
+---
+
+##  Manual Download
+
+If the script doesn't work on your system:
+
+Go to: https://github.com/LiranOG/cosmic-ib-dashboard/releases
+
+Download the latest files.7z asset
+
+Place it in the project root
+
+Extract: 7z x files.7z -oextracted/
+
+Note: The app expects the extracted files in a folder named extracted/ alongside app.py.
+
+What's Inside
+
+The archive contains 105 files (~136 MB uncompressed) including:
+
+HEALPix sky maps (density, cluster counts, Ricci curvature)
+
+Mutual information results at multiple resolutions (nside=8, 16, 32, 64)
+
+Fisher analysis data (I(X;T)=82.93I(X;T)=82.93 nats)
+
+Topological persistence data (ΦTDA=977Φ TDA​ =977)
+
+ETF scores and bootstrap distributions
+
+SDSS galaxy and redMaPPer cluster catalogs (FITS format)
+
+All visualisations (PNG) used in the dashboard
+
+For a complete file list, see data/README.md.
+
+Verification
+After extraction, verify that the extracted/ folder exists and contains files:
+
+```
+bash
+ls extracted/ | head -10
+You should see files like density_map.png, fisher_results.npz, etc.
+```
+
+You should see files like density_map.png, fisher_results.npz, etc.
+
+
+---
+
 ## Running the Dashboard
 
 ### Local (recommended for development)
@@ -384,6 +454,14 @@ This project is released under the **MIT License** — see [LICENSE](LICENSE) fo
 - **Plotly** — Plotly Technologies Inc.
 
 ---
+
+## Data Sources
+|Dataset | Source | Reference|
+|------------|---------------|
+| SDSS DR18 | SDSS | CasJobs | https://www.sdss.org/dr18 |
+| redMaPPer | DR8 | VizieR | (J/ApJS/785/104) | Rykoff et al. 2014 |
+| HEALPix | Maps | Custom processing | Górski et al. 2005 |
+| Fisher Analysis | Custom processing | This work |
 
 ## References
 
