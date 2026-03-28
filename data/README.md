@@ -1,7 +1,45 @@
 # Data Files Reference
 
-This directory is a placeholder. All runtime data lives in `extracted/` (produced by
-running `bash scripts/extract_data.sh` from the repository root).
+# Data Files for Cosmic-Scale Information Bottleneck Dashboard
+
+This folder is **intentionally empty** in the repository. The data files are too large to store directly on GitHub.
+
+## 📦 Download the Data
+
+The complete dataset (105 files, ~136 MB uncompressed) is available as a GitHub Release asset.
+
+### Option 1: Download via Release Page
+1. Go to: https://github.com/LiranOG/cosmic-ib-dashboard/releases
+2. Download the latest `files.7z` archive
+3. Extract to the project root:
+   ```bash
+   7z x files.7z -oextracted/
+
+Option 2: Using the download script (Linux/Mac/WSL)
+bash
+# From the project root
+```bash
+ scripts/download_data.sh
+```
+
+Option 3: Manual extraction
+Place files.7z in the project root and run:
+
+```bash
+7z x files.7z -oextracted/
+```
+
+Note: The app expects the extracted files in a folder named extracted/ alongside app.py.
+
+
+Verification
+After extraction, you should have exactly 105 files in the extracted/ folder. To verify:
+
+```bash
+ls extracted/ | wc -l   # Linux/Mac
+dir extracted\           # Windows
+```
+
 
 > **Do not commit binary data to git.** Large files (`.fits`, `.npz`, `.npy`) are listed
 > in `.gitignore`. Use the provided archive `files.7z` to distribute or transfer data.
@@ -27,6 +65,7 @@ running `bash scripts/extract_data.sh` from the repository root).
 | `cluster_count_nside8.fits` | 8 | 768 | Cluster count at nside=8 |
 | `cluster_map_nside64.fits` | 64 | 49,152 | Cluster count at nside=64 |
 | `ricci_map_nside16.fits` | 16 | 3,072 | Discrete Ollivier–Ricci curvature κ per pixel |
+
 
 **HEALPix convention:** All maps use the RING ordering scheme and Galactic coordinates.
 Masked / invalid pixels are set to `healpy.UNSEEN` (-1.6375e+30).
