@@ -235,7 +235,7 @@ The easiest way to get the data:
 bash scripts/download_data.sh
 ```
 
-his script will:
+This script will:
 
 Download files.7z from the GitHub Release
 
