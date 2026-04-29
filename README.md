@@ -1,13 +1,10 @@
 # 🌌 Cosmic-Scale Information Bottleneck Efficiency Dashboard
 
-[![CI](https://github.com/LiranOG/cosmic-ib-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/LiranOG/cosmic-ib-dashboard/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit 1.32+](https://img.shields.io/badge/streamlit-1.32%2B-red.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![HEALPix](https://img.shields.io/badge/HEALPix-healpy-orange.svg)](https://healpy.readthedocs.io)
 [![SDSS DR18](https://img.shields.io/badge/data-SDSS%20DR18-brightgreen.svg)](https://www.sdss4.org/dr18/)
-[![Docker](https://img.shields.io/badge/docker-ready-2496ED.svg)](Dockerfile)
-[![Tests](https://img.shields.io/badge/tests-15%20passing-success.svg)](tests/)
 
 > An interactive academic dashboard for exploring the cosmic-scale Information Bottleneck
 > efficiency **η_IB** as a partial empirical test of the Universal Information Bottleneck
@@ -31,7 +28,6 @@
 - [Deployment](#deployment)
 - [Customisation](#customisation)
 - [Contributing](#contributing)
-- [Changelog](#changelog)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [References](#references)
@@ -100,7 +96,6 @@ cosmic-ib-dashboard/
 ├── environment.yml                 # Conda environment spec
 ├── pytest.ini                      # pytest configuration
 ├── Dockerfile                      # Multi-stage Docker build
-├── CHANGELOG.md                    # Version history
 ├── CONTRIBUTING.md                 # Contribution guidelines
 ├── LICENSE                         # MIT License
 ├── README.md                       # This file
@@ -437,12 +432,6 @@ git commit -m "feat: add my feature"
 git push origin feature/my-feature
 # open a Pull Request
 ```
-
----
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a full version history.
 
 ---
 
